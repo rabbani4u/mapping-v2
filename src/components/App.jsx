@@ -2,12 +2,13 @@ import React from "react";
 import emojipedia from "../emojipedia";
 import Card from "./Card";
 
-function createCard(emojipedi) {
+function createCard(emojiTerm) {
   return (
     <Card
-      emoji={emojipedi.emoji}
-      name={emojipedi.name}
-      meaning={emojipedi.meaning}
+      key={emojiTerm.id}
+      emoji={emojiTerm.emoji}
+      name={emojiTerm.name}
+      meaning={emojiTerm.meaning}
     />
   );
 }
