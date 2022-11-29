@@ -1,5 +1,19 @@
 import React from "react";
 
+function Card(props) {
+  return (
+    <div className="term">
+      <dt>
+        <span className="emoji" role="img" aria-label="Tense Biceps">
+          {props.emoji}
+        </span>
+        <span>{props.heading}</span>
+      </dt>
+      <dd>{props.des}</dd>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div>
@@ -8,44 +22,21 @@ function App() {
       </h1>
 
       <dl className="dictionary">
-        <div className="term">
-          <dt>
-            <span className="emoji" role="img" aria-label="Tense Biceps">
-              💪
-            </span>
-            <span>Tense Biceps</span>
-          </dt>
-          <dd>
-            “You can do that!” or “I feel strong!” Arm with tense biceps. Also
-            used in connection with doing sports, e.g. at the gym.
-          </dd>
-        </div>
-        <div className="term">
-          <dt>
-            <span className="emoji" role="img" aria-label="Tense Biceps">
-              🙏
-            </span>
-            <span>Person With Folded Hands</span>
-          </dt>
-          <dd>
-            Two hands pressed together. Is currently very introverted, saying a
-            prayer, or hoping for enlightenment. Is also used as a “high five”
-            or to say thank you.
-          </dd>
-        </div>
-        <div className="term">
-          <dt>
-            <span className="emoji" role="img" aria-label="Tense Biceps">
-              🤣
-            </span>
-            <span>Rolling On The Floor, Laughing</span>
-          </dt>
-          <dd>
-            This is funny! A smiley face, rolling on the floor, laughing. The
-            face is laughing boundlessly. The emoji version of “rofl“. Stands
-            for „rolling on the floor, laughing“.
-          </dd>
-        </div>
+        <Card
+          emoji="💪"
+          heading="Tense Biceps"
+          des="This is Two hands pressed together. Is currently very introverted, saying a prayer"
+        />
+        <Card
+          emoji="🏆"
+          heading="Person With Folded Hands"
+          des="Here is or hoping for enlightenment. Is also used as a “high five” or to say thank you."
+        />
+        <Card
+          emoji="🤣"
+          heading="Rolling On The Floor, Laughing"
+          des="This is funny! A smiley face, rolling on the floor, laughing. The face is laughing boundlessly."
+        />
       </dl>
     </div>
   );
