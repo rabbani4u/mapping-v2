@@ -1,18 +1,6 @@
 import React from "react";
-
-function Card(props) {
-  return (
-    <div className="term">
-      <dt>
-        <span className="emoji" role="img" aria-label="Tense Biceps">
-          {props.emoji}
-        </span>
-        <span>{props.heading}</span>
-      </dt>
-      <dd>{props.des}</dd>
-    </div>
-  );
-}
+import emojipedia from "../emojipedia";
+import Card from "./Card";
 
 function App() {
   return (
@@ -23,19 +11,19 @@ function App() {
 
       <dl className="dictionary">
         <Card
-          emoji="💪"
-          heading="Tense Biceps"
-          des="This is Two hands pressed together. Is currently very introverted, saying a prayer"
+          emoji={emojipedia[0].emoji}
+          name={emojipedia[0].name}
+          meaning={emojipedia[0].meaning}
         />
         <Card
-          emoji="🏆"
-          heading="Person With Folded Hands"
-          des="Here is or hoping for enlightenment. Is also used as a “high five” or to say thank you."
+          emoji={emojipedia[1].emoji}
+          name={emojipedia[1].name}
+          meaning={emojipedia[1].meaning}
         />
         <Card
-          emoji="🤣"
-          heading="Rolling On The Floor, Laughing"
-          des="This is funny! A smiley face, rolling on the floor, laughing. The face is laughing boundlessly."
+          emoji={emojipedia[2].emoji}
+          name={emojipedia[2].name}
+          meaning={emojipedia[2].meaning}
         />
       </dl>
     </div>
